@@ -28,7 +28,7 @@ Please see
  * http://pragdave.me/blog/2008/01/01/pipelines-using-fibers-in-ruby-19part-ii/
  
 ### Example
-{{{
+```ruby
 require 'fibeline'
 
 class Evens < Fibeline::GenericElement
@@ -49,15 +49,15 @@ multiple_of_five = Fibeline::Filter.new { |val| val % 5 == 0 }
 5.times do
   puts (evens | tripler | incrementer | multiple_of_five).resume
 end
-}}}
+```
 
-{{{
+```ruby
 find        = Fibeline::ProcessTransformer.new('find -type f')
 to_pathname = Fibeline::Transformer.new { |s| Pathname(s) }
 realpath    = Fibeline::Transformer.new(&:realpath)
 
 puts (find | to_pathname | realpath).to_a
-}}}
+```
 
 ## Contributing
 
