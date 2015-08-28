@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = 'fibeline'
   spec.version       = Fibeline::VERSION
   spec.authors       = ['Christian Haase']
-  spec.email         = ["github@eggchamber.net"]
+  spec.email         = ['github@eggchamber.net']
   spec.summary       = %q{Pipelines using Fibers}
-  spec.homepage      = 'https://github.com/krissi/fibelines'
+  spec.homepage      = 'https://github.com/krissi/fibeline'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
